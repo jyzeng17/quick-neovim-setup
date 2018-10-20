@@ -1,4 +1,4 @@
-# quick-neovim-setup
+# Quick-neovim-setup
 
 * A script for installing Neovim with some useful settings and plugins in a newly installed ubuntu 16.04 server.
 
