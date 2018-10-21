@@ -8,7 +8,7 @@
 2. Install Vundle plugin if not installed yet
 3. Install [ctags](https://github.com/universal-ctags/ctags) as Tagbar plugin's dependency if not installed yet
 3. Copy the vim scripts to the corresponding path
-	* If the corresponding path directory already exists, make a copy of it (See [Note](#Note))
+	* If the corresponding path directory already exists, make a copy of it (See [Note](#note))
 4. Install other plugins in the vim scripts via Vundle
 
 ## Usage
