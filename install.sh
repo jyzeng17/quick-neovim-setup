@@ -70,6 +70,7 @@ echo -n "checking for ctags... "
 if ! [ -x "$(command -v ctags)" ]; then
 	echo "no"
 	git clone https://github.com/universal-ctags/ctags.git
+	cd ctags
 	echo -n "checking for autoreconf... "
 	if ! [ -x "$(command -v autoreconf)" ]; then
 		echo "no"
@@ -84,10 +85,11 @@ if ! [ -x "$(command -v ctags)" ]; then
 	else
 		echo "yes"
 	fi
-	ctags/autogen.sh
-	ctags/configure
+	./autogen.sh
+	./configure
 	make
 	sudo make install
+	cd ../
 else
 	echo "yes"
 fi
