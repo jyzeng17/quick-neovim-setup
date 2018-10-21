@@ -15,6 +15,7 @@
 
 1. Clone this repository to a ubuntu 16.04 device
 2. In the cloned directory, `$ chmod u+x install.sh && ./install.sh`
+	* Use `$ chmod u+x install.sh && ./install.sh -f` instead if you want to ignore the existed backup directory 
 3. Wait until it's done (in the middle of the process, it will switch to Neovim interface, **do not interrupt it**)
 4. Remove the cloned directory and use `nvim` command to enjoy it
 
