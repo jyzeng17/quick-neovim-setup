@@ -29,3 +29,7 @@ map <right> <nop>
 " Easier way to switch between buffers
 nnoremap <S-h> :bp<CR>
 nnoremap <S-l> :bn<CR>
+
+" Plugin shortcuts
+map <C-n> :NERDTreeToggle<CR>
+map <C-t> :TagbarToggle<CR>

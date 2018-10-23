@@ -9,16 +9,12 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd vimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Close neovim when only NERDTree left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Shortcut (Ctrl+n)
-map <C-n> :NERDTreeToggle<CR>
 "let g:NERDTreeWinPos = "right"  " open on the right side
 " Automatically start
 "autocmd vimenter * NERDTree
 "autocmd vimenter * wincmd l
 
 " Tagbar
-" Shortcut (Ctrl+t)
-nmap <C-t> :TagbarToggle<CR>
 "autocmd vimenter * Tagbar      " automatically start
 
 " vim-airline
