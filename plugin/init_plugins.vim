@@ -25,5 +25,5 @@ nmap <C-t> :TagbarToggle<CR>
 let g:airline#extensions#tabline#enabled = 1    " automatically displays all buffers when only one tab
 
 " vim-airline-themes
-let g:airline_theme='base16'    " change to any theme you like
+let g:airline_theme='gruvbox'    " change to any theme you like
 " Use 'AirlineTheme <theme>' command to find and try new themes
