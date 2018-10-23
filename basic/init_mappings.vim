@@ -30,6 +30,14 @@ map <right> <nop>
 nnoremap <S-h> :bp<CR>
 nnoremap <S-l> :bn<CR>
 
+" Easier way to save
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
+" Easier way to quit
+nnoremap <C-q> :q<CR>
+inoremap <C-q> <Esc>:q<CR>
+
 " Plugin shortcuts
 map <C-n> :NERDTreeToggle<CR>
 map <C-t> :TagbarToggle<CR>
