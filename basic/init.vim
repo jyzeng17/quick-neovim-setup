@@ -33,3 +33,6 @@ endif
 if !empty(glob("~/.config/nvim/init_plugins.vim"))
     source ~/.config/nvim/init_plugins.vim
 endif
+if !empty(glob("~/.config/nvim/init_functions.vim"))
+    source ~/.config/nvim/init_functions.vim
+endif

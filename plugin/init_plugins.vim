@@ -18,8 +18,16 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "autocmd vimenter * Tagbar      " automatically start
 
 " vim-airline
-let g:airline#extensions#tabline#enabled = 1    " automatically displays all buffers when only one tab
+" Displays all buffers when only one tab, otherwise displays all tabs
+let g:airline#extensions#tabline#enabled = 1
 
 " vim-airline-themes
-let g:airline_theme='gruvbox'    " change to any theme you like
+let g:airline_theme='base16'	" change to any theme you like
 " Use 'AirlineTheme <theme>' command to find and try new themes
+
+" YCM
+"let g:ycm_autoclose_preview_window_after_completion = 1	" auto-close preview window after select a completion
+"let g:ycm_autoclose_preview_window_after_insertion = 1	" auto-close preview window after leaving insert mode
+" Disable preview window
+"set completeopt-=preview
+"let g:ycm_add_preview_to_completeopt = 0

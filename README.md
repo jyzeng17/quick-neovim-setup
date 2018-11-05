@@ -1,6 +1,6 @@
 # quick-neovim-setup
 
-* A shell script for installing Neovim with some useful settings and plugins in Ubuntu 16.04
+* A shell script for installing Neovim with some useful settings and plugins in Ubuntu 16.04 or higher version
 
 ## What Exactly The Script Does
 
@@ -24,5 +24,5 @@
 
 ## Environment
 
-* OS: Ubuntu 16.04
+* OS: Ubuntu 16.04 or higher version
 * Neovim: 0.3.0
