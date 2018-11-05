@@ -14,8 +14,8 @@
 ## Usage
 
 1. Clone this repository to a ubuntu 16.04 device
-2. In the cloned directory, `$ chmod u+x install.sh && ./install.sh`
-3. Wait until it's done (in the middle of the process, it will switch to Neovim interface, **DO NOT INTERRUPT IT**, and may ask you for root permission)
+2. In the cloned directory, `$ chmod u+x install.sh && ./install.sh` (It may ask for your root permission)
+3. Wait until it's done (in the middle of the process, it will switch to Neovim interface, **DO NOT INTERRUPT IT**)
 4. Remove the cloned directory and use `nvim` command to enjoy it
 
 ## Note
