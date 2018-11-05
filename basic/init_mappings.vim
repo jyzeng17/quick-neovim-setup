@@ -12,13 +12,16 @@ nnoremap k gk
 nnoremap ; :
 " Insert new line in normal mode
 nnoremap <CR> o<Esc>k
-" More intuitive way to insert tab in normal mode
+" More intuitive way to insert tabs
 nnoremap <Tab> >>
-vnoremap <Tab> >>
+vnoremap <Tab> >
 " An alternative way to leave insert mode
 inoremap ,, <Esc>
 " Easier way to leave terminal mode
 tnoremap <Esc> <C-\><C-n>
+tnoremap ,, <C-\><C-n>
+" Easier way to leave visual mode
+vnoremap ,, <Esc>
 
 " Arrow keys are BAD
 map <up> <nop>
@@ -37,7 +40,11 @@ inoremap <C-s> <Esc>:w<CR>
 " Easier way to quit
 nnoremap <C-q> :q<CR>
 inoremap <C-q> <Esc>:q<CR>
+tnoremap <C-q> <C-\><C-n>:q<CR>
+
+" Auto-completion for brackets
+inoremap {<CR> {<CR>}<Esc>ko
 
 " Plugin shortcuts
 map <C-n> :NERDTreeToggle<CR>
-map <C-t> :TagbarToggle<CR>
+nmap <C-t> :TagbarToggle<CR>
