@@ -47,4 +47,4 @@ inoremap {<CR> {<CR>}<Esc>ko
 
 " Plugin shortcuts
 map <C-n> :NERDTreeToggle<CR>
-nmap <C-t> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR>
