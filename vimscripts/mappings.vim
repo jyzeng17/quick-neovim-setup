@@ -45,6 +45,28 @@ tnoremap <C-q> <C-\><C-n>:q<CR>
 " Auto-completion for brackets
 inoremap {<CR> {<CR>}<Esc>ko
 
+let mapleader = ","
+"#################################################
+" Leader key mappings from amix/vimrc
+"#################################################
+
+" Nerdtree shortcuts
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nf :NERDTreeFind<cr>
+
+" Disable search highlight
+map <silent> <leader><cr> :noh<cr>
+
+" Close current buffer
+map <leader>bd :Bclose<cr>
+
+" Switch CWD to the directory of the open buffer and print new CWD
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Toggle paste mode (disable autoindentation and other string handlings,
+" useful for pasting code segment from somewhere else)
+map <leader>pp :setlocal paste!<cr>
+"#################################################
+
 " Plugin shortcuts
-map <C-n> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>tt :TagbarToggle<CR>
