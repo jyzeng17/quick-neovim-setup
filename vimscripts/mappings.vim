@@ -57,9 +57,6 @@ map <leader>nf :NERDTreeFind<cr>
 " Disable search highlight
 map <silent> <leader><cr> :noh<cr>
 
-" Close current buffer
-map <leader>bd :Bclose<cr>
-
 " Switch CWD to the directory of the open buffer and print new CWD
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
@@ -70,3 +67,6 @@ map <leader>pp :setlocal paste!<cr>
 
 " Plugin shortcuts
 nmap <leader>tt :TagbarToggle<CR>
+
+" Close current buffer
+map <leader>bd :bdelete<cr>
