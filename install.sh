@@ -41,24 +41,34 @@ fi
 
 echo -n -e "checking if \"~/.config/nvim\" exists... "
 if [ -d ~/.config/nvim ]; then
-	echo "yes"
-	echo -n -e "checking if \"~/.config/nvim_backup\" exists... "
-	if [ -d ~/.config/nvim_backup ] && [ "$#" -eq 0 ]; then
-		echo -n "yes. "
-		read -p "Do you want to override it? [y/n] " answer
-		until [ "$answer" == "y" ] || [ "$answer" == "Y" ] || [ "$answer" == "n" ] || [ "$answer" == "N" ]
-		do
-			read -p "Invalid answer. Do you want to override the existed backup directory? [y/n] " answer
-		done
-		if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
-			cp -r ~/.config/nvim ~/.config/nvim_backup
+	echo -e "yes\n"
+	read -p "Do you want to deploy the new vim scripts and make a copy of the old ones? [y/n] " answer
+	until [ "$answer" == "y" ] || [ "$answer" == "Y" ] || [ "$answer" == "n" ] || [ "$answer" == "N" ]
+	do
+		read -p "Invalid answer. Do you want to deploy the new vim scripts and make a copy of the old directory? [y/n] " answer
+	done
+	if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
+		echo -n -e "checking if \"~/.config/nvim_backup\" exists... "
+		if [ -d ~/.config/nvim_backup ] && [ "$#" -eq 0 ]; then
+			echo -e "yes\n"
+			read -p "Do you want to override it? [y/n] " answer
+			until [ "$answer" == "y" ] || [ "$answer" == "Y" ] || [ "$answer" == "n" ] || [ "$answer" == "N" ]
+			do
+				read -p "Invalid answer. Do you want to override the existed backup directory? [y/n] " answer
+			done
+			if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
+				cp -r ~/.config/nvim ~/.config/nvim_backup
+			else
+				echo "Aborted."
+				exit 1
+			fi
 		else
-			echo "Aborted."
-			exit 1
+			echo "no"
+			cp -r ~/.config/nvim ~/.config/nvim_backup
 		fi
 	else
-		echo "no"
-		cp -r ~/.config/nvim ~/.config/nvim_backup
+		echo "Aborted."
+		exit 1
 	fi
 else
 	echo "no"
@@ -94,13 +104,13 @@ else
 	echo "yes"
 fi
 
-cp basic/* ~/.config/nvim
+cp vimscripts/*.vim ~/.config/nvim
 
 echo -n "switching to Neovim to install plugins... "
 nvim +PluginInstall +qall
 echo "done"
 
-cp plugin/init_plugins.vim ~/.config/nvim
+cp vimscripts/plugin/plugins.vim ~/.config/nvim
 
 echo "successfully completed!"
 exit 0

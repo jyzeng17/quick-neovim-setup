@@ -24,15 +24,15 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Run other vim script if exists
-if !empty(glob("~/.config/nvim/init_settings.vim"))
-    source ~/.config/nvim/init_settings.vim
+if !empty(glob("~/.config/nvim/settings.vim"))
+    source ~/.config/nvim/settings.vim
 endif
-if !empty(glob("~/.config/nvim/init_mappings.vim"))
-    source ~/.config/nvim/init_mappings.vim
+if !empty(glob("~/.config/nvim/mappings.vim"))
+    source ~/.config/nvim/mappings.vim
 endif
-if !empty(glob("~/.config/nvim/init_plugins.vim"))
-    source ~/.config/nvim/init_plugins.vim
+if !empty(glob("~/.config/nvim/plugins.vim"))
+    source ~/.config/nvim/plugins.vim
 endif
-if !empty(glob("~/.config/nvim/init_functions.vim"))
-    source ~/.config/nvim/init_functions.vim
+if !empty(glob("~/.config/nvim/functions.vim"))
+    source ~/.config/nvim/functions.vim
 endif
