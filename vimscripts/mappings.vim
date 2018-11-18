@@ -14,7 +14,9 @@ nnoremap ; :
 nnoremap <CR> o<Esc>k
 " More intuitive way to insert tabs
 nnoremap <Tab> >>
+nnoremap <S-Tab> <<
 vnoremap <Tab> >
+vnoremap <S-Tab> <
 " An alternative way to leave insert mode
 inoremap ,, <Esc>
 " Easier way to leave terminal mode
