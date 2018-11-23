@@ -57,14 +57,16 @@ if [ -d ~/.config/nvim ]; then
 				read -p "Invalid answer. Do you want to override the existed backup directory? [y/n] " answer
 			done
 			if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
-				cp -r ~/.config/nvim ~/.config/nvim_backup
+				mv ~/.config/nvim ~/.config/nvim_backup
+				mkdir -p ~/.config/nvim
 			else
 				echo "Aborted."
 				exit 1
 			fi
 		else
 			echo "no"
-			cp -r ~/.config/nvim ~/.config/nvim_backup
+			mv ~/.config/nvim ~/.config/nvim_backup
+			mkdir -p ~/.config/nvim
 		fi
 	else
 		echo "Aborted."
