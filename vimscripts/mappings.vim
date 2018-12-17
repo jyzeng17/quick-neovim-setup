@@ -11,7 +11,7 @@ nnoremap k gk
 " Easier way to enter command
 nnoremap ; :
 " Insert new line in normal mode
-nnoremap <CR> o<Esc>k
+nnoremap <CR> moo<Esc>d0x`o
 " More intuitive way to insert tabs
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
