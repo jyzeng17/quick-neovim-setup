@@ -9,7 +9,9 @@ nnoremap j gj
 nnoremap k gk
 
 " Easier way to enter command
-nnoremap ; :
+" (remove for now, wanna use its original function,
+" which is repeating the last seach action)
+"nnoremap ; :
 " Insert new line in normal mode
 nnoremap <CR> moo<Esc>d0x`o
 " More intuitive way to insert tabs
@@ -34,15 +36,6 @@ map <right> <nop>
 " Easier way to switch between buffers
 nnoremap <S-h> :bp<CR>
 nnoremap <S-l> :bn<CR>
-
-" Easier way to save
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>
-
-" Easier way to quit
-nnoremap <C-q> :q<CR>
-inoremap <C-q> <Esc>:q<CR>
-tnoremap <C-q> <C-\><C-n>:q<CR>
 
 " Auto-completion for brackets
 inoremap {<CR> {<CR>}<Esc>ko
@@ -72,3 +65,19 @@ nmap <leader>tt :TagbarToggle<CR>
 
 " Close current buffer
 map <leader>bd :bdelete<cr>
+
+" Easier way to save
+nnoremap <leader>w :w<CR>
+inoremap <leader>w <Esc>:w<CR>
+
+" Easier way to quit
+nnoremap <leader>q :q<CR>
+inoremap <leader>q <Esc>:q<CR>
+tnoremap <leader>q <C-\><C-n>:q<CR>
+
+" Easier way to force quit
+nnoremap <leader>Q :q!<CR>
+inoremap <leader>Q <Esc>:q!<CR>
+
+" Easier way to refresh current buffer
+nnoremap <leader>e :e<CR>
