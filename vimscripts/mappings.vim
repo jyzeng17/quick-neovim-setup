@@ -81,3 +81,8 @@ inoremap <leader>Q <Esc>:q!<CR>
 
 " Easier way to refresh current buffer
 nnoremap <leader>e :e<CR>
+
+" Mappings for the quickfix window's use (switch between vimgrep's result)
+nnoremap <leader>cw :cw<CR>
+nnoremap <leader>cn :cn<CR>
+nnoremap <leader>cp :cp<CR>
