@@ -1,28 +1,25 @@
 # quick-neovim-setup
 
-* A shell script for installing Neovim with some useful settings and plugins in Ubuntu 16.04 or higher version
+* A script for installing Neovim along with some useful plugins and basic settings in Ubuntu.
 
-## What Exactly The Script Does
+### Introduction
 
-1. Install Neovim via Ubuntu PPA server if not installed yet
-2. Install Vundle plugin if not installed yet
-3. Install [ctags](https://github.com/universal-ctags/ctags) as Tagbar plugin's dependency if not installed yet
-3. Copy the vim scripts to the corresponding path
-	* If the corresponding path directory already exists, make a copy of it (See [Note](#note))
-4. Install other plugins in the vim scripts via Vundle
+> It only works on Ubuntu 16.04/18.04
 
-## Usage
+The script will do the following tasks:
 
-1. Clone this repository to a ubuntu 16.04 device
-2. In the cloned directory, `$ ./install.sh` (Might ask for your password)
-3. Wait until it's done (in the middle of the process, it will switch to Neovim interface, **DO NOT INTERRUPT IT**)
-4. Remove the cloned directory and use `nvim` command to enjoy it
+1. Install Neovim via Ubuntu PPA server
+2. Install Vundle plugin
+3. Install [ctags](https://github.com/universal-ctags/ctags) as Tagbar plugin's dependency
+4. Copy the provided vim scripts files to `~/.config/nvim`
+	* If the directory already exists, the original content will be moved to `~/.config/nvim_backup`
+5. Install other plugins in the provided vim scripts via Vundle
 
-## Note
+### Usage
 
-* The original `~/.config/nvim` will be copied to `~/.config/nvim_backup`
-
-## Environment
-
-* OS: Ubuntu 16.04 or higher version
-* Neovim: 0.3.0
+1. Clone this repository
+2. Under the cloned directory, `$ sudo ./install.sh`
+3. Wait for the installing process to be done
+	* Do not interrupt it when switching to Neovim's interface
+	* The message `successfully completed!` will show up when the whole process has finished
+4. Try `$ nvim` to see if everything works properly
